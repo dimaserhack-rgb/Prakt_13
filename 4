@@ -1,0 +1,14 @@
+ip_parts = input("Введите ваш IP адрес из 4 чисел через точку(Ну можно и не ваш)").split('.')
+
+is_valid = True
+
+for part in ip_parts:
+    num = int(part)
+    if num < 0 or num > 255:
+        is_valid = False
+        break
+
+if is_valid:
+    print("ДА")
+else:
+    print("НЕТ")
